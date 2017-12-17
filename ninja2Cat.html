@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery - Ninja to Cat</title>
+    <link rel="stylesheet" href="ninja2Cat.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        var HTMLstring = "";
+        for(var x = 0; x < 5; x++){
+            HTMLstring += '<img src="./img/ninja'+x+'.png" data-alt-src="cat'+x+'.png" >'
+        }
+        $(document).ready(function(){
+            $(".container").append(HTMLstring);
+
+            $("img").click(function() {
+                console.log('data-alt-src value is', $(this).attr('data-alt-src'));
+                $(this).html('<img src="./img/'+$(this).attr('data-alt-src')+'" data-alt-src="'+$(this).attr('data-alt-src')+'" >');
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="container"></div>
+</body>
+</html>
