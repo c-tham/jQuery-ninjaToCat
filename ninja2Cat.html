@@ -7,23 +7,23 @@
     <title>jQuery - Ninja to Cat</title>
     <link rel="stylesheet" href="ninja2Cat.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script>
-        var HTMLstring = "";
-        for(var x = 0; x < 5; x++){
-            HTMLstring += '<img src="./img/ninja'+x+'.png" data-alt-src="./img/cat'+x+'.png" temp="">'
-        }
-        $(document).ready(function(){
-            $(".container").append(HTMLstring);
+    <script src="ninja2Cat.js">
+        // var HTMLstring = "";git a
+        // for(var x = 0; x < 5; x++){
+        //     HTMLstring += '<img src="./img/ninja'+x+'.png" data-alt-src="./img/cat'+x+'.png" temp="">'
+        // }
+        // $(document).ready(function(){
+        //     $(".container").append(HTMLstring);
 
-            $("img").click(function() {
-                console.log('         src value is', $(this).attr('src'));
-                console.log('data-alt-src value is', $(this).attr('data-alt-src'));
-                console.log('        temp value is', $(this).attr('temp'));
-                $(this).attr('temp',$(this).attr('src'));
-                $(this).attr('src',$(this).attr('data-alt-src'));
-                $(this).attr('data-alt-src',$(this).attr('temp'));
-            })
-        })
+        //     $("img").click(function() {
+        //         console.log('         src value is', $(this).attr('src'));
+        //         console.log('data-alt-src value is', $(this).attr('data-alt-src'));
+        //         console.log('        temp value is', $(this).attr('temp'));
+        //         $(this).attr('temp',$(this).attr('src'));
+        //         $(this).attr('src',$(this).attr('data-alt-src'));
+        //         $(this).attr('data-alt-src',$(this).attr('temp'));
+        //     })
+        // })
     </script>
 </head>
 <body>
